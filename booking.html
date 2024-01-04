@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking Form</title>
+	<style>
+		.card {
+			width: 400px;
+			height: auto;
+			background-color: #fff;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+			overflow: hidden;
+			margin: 20px;
+			padding: 20px;
+		}
+		body{
+			display: grid;
+			justify-content: center;
+			align-items: center;
+		}
+		h2 {
+			font-size: 24px;
+			font-weight: 600;
+			margin: 0 0 20px;
+		}
+		
+		form {
+			display: flex;
+			flex-direction: column;
+		}
+		
+		label {
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 5px;
+		}
+		
+		input[type="text"], select {
+			height: 40px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			padding: 10px;
+			margin-bottom: 10px;
+			font-size: 16px;
+		}
+		
+		input[type="submit"] {
+			background-color:goldenrod;
+			color: black;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			font-size: 18px;
+			margin-top: 20px;
+			cursor: pointer;
+		}
+		
+		input[type="submit"]:hover {
+			background-color: black;
+			color: white;
+		}
+		
+		@media only screen and (max-width: 600px) {
+          .card {
+          width: 90%;
+        }
+  
+          input[type="text"], select {
+          width: 100%;
+        }
+}
+
+	</style>
+</head>
+<body>
+	<div class="card">
+		<h2>Booking Form</h2>
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email" required>
+
+			<label for="phone">Phone:</label>
+			<input type="text" id="phone" name="phone" required>
+
+			<label for="date">Date:</label>
+			<input type="text" id="date" name="date" required>
+
+			<label for="time">Time:</label>
+			<select id="time" name="time" required>
+				<option value="">Select a time</option>
+				<option value="9am">9:00 AM</option>
+				<option value="10am">10:00 AM</option>
+				<option value="11am">11:00 AM</option>
+				<option value="12pm">12:00 PM</option>
+				<option value="1pm">1:00 PM</option>
+				<option value="2pm">2:00 PM</option>
+				<option value="3pm">3:00 PM</option>
+				<option value="4pm">4:00 PM</option>
+			</select>
+
+			<input type="submit" value="Book Now">
+		</form>
+	</div>
+</body>
+</html>
